@@ -1,0 +1,50 @@
+<!--#main#-->
+<div class="wrap">
+	<h2>Comments URLs Extractor</h2>
+	
+	<p>Extract URLs from the text field and from the author website field on WordPress comments.</p>
+	
+	<p><strong>Created by </strong><a href="http://www.wpmize.com/" target="_blank"><strong>WPMize.com</strong></a></p>
+	
+	<p>Select what fields do you want to scan for URLs:</p>
+	
+	<form method="post" action="">
+		<p>
+			<b>
+				Content: <input type="checkbox" name="comment_content" value="1" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Author website: <input type="checkbox" name="comment_author_url" value="1" />
+			</b>
+		</p>
+		
+		<p>Select what type of comment do you to scan:</p>
+ 	
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row">Approved Comments</th>
+				<td><input type="checkbox" name=handler[approved_comments] value="1" /></td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">Unapproved Comments</th>
+				<td><input type="checkbox" name=handler[unapproved_comments] value="1" /></td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">Spam comments</th>
+				<td><input type="checkbox" name=handler[spam_comments] value="1" /></td>
+			</tr>
+			<tr valign="top">
+				<th scope="row">Trash Comments</th>
+				<td><input type="checkbox" name=handler[trash_comments] value="1" /></td>
+			</tr>			
+			<tr valign="top">
+				<th scope="row">&nbsp;</th>
+				<td><input type="submit" name="go" value="Proceed" /></td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+<br />
+<br />
+
+<!--#area#-->
+<textarea cols="100" rows="10">{urls}</textarea>
